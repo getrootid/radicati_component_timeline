@@ -1,0 +1,116 @@
+.vertical-timeline {
+  position: relative;
+  padding: 0;
+  margin: 0;
+
+
+  --timeline--marker-size: 1.5rem;
+  --timeline--marker-line-length: 3rem;
+  --timeline--marker--top-offset: 1rem;
+  --timeline--label--gap: 0.5rem;
+}
+
+.vertical-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: #cccccc;
+
+}
+
+@media (min-width: 48rem) {
+  .vertical-timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.vertical-timeline-group {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+  width: calc(80% + var(--timeline--marker-size)/2);
+  left: calc(-1 * var(--timeline--marker-size)/2);
+}
+
+@media (min-width: 48rem) {
+  .vertical-timeline-group {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: flex-end;
+    left: unset;
+
+    width: calc(50% + var(--timeline--marker-size)/2);
+  }
+
+  .vertical-timeline-group:nth-child(odd) {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-left: calc(50% - var(--timeline--marker-size)/2);
+  }
+}
+
+.vertical-timeline-group__line {
+  flex: 0 0 var(--timeline--marker-line-length);
+  position: relative;
+  top: var(--timeline--marker--top-offset);
+  width: var(--timeline--marker-line-length);
+  height: 2px;
+  background: #cccccc;
+}
+
+.vertical-timeline-group__marker {
+  flex: 0 0 var(--timeline--marker-size);
+  position: relative;
+  top: calc(var(--timeline--marker--top-offset) + 1px - var(--timeline--marker-size)/2);
+  width: var(--timeline--marker-size);
+  height: var(--timeline--marker-size);
+  border-radius: 50%;
+  background: #cccccc;
+  z-index: 1;
+}
+
+.vertical-timeline-group__content {
+  background: #efefef;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+
+.vertical-timeline-group__label {
+  white-space: nowrap;
+  line-height: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 48rem) {
+
+  .vertical-timeline-group__label {
+    position: absolute;
+    top: calc(var(--timeline--marker--top-offset) - 0.5rem);
+    left: calc(100% + (var(--timeline--marker-size)/2 + var(--timeline--label--gap)));
+    white-space: nowrap;
+    line-height: 1rem;
+    margin: unset;
+  }
+
+  .vertical-timeline-group:nth-child(odd) .vertical-timeline-group__label {
+    left: unset;
+    right: calc(100% + (var(--timeline--marker-size) / 2 + var(--timeline--label--gap)));
+  }
+}
+
+
+.vertical-timeline-item {
+  border: 1px solid black;
+  padding: 15px 40px;
+  margin: 0 0 20px 0;
+  background: #cccccc;
+}

@@ -1,0 +1,11 @@
+uuid: 546969f6-0c23-44bf-bd76-376ee696b6b0
+langcode: en
+status: true
+dependencies: {  }
+id: vertical_timeline
+block_id: 'inline_block:vertical_timeline'
+category: components
+label: 'Vertical Timeline'
+image_path: ''
+image_alt: ''
+weight: null

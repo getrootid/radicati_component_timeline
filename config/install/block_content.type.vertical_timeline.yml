@@ -1,0 +1,8 @@
+uuid: 649983be-ec08-4c07-a706-8eb0d3049e20
+langcode: en
+status: true
+dependencies: {  }
+id: vertical_timeline
+label: 'Vertical Timeline'
+revision: false
+description: 'A simple vertical timeline that displays a set of Timeline Items along a timeline that has an optional date/time display.'

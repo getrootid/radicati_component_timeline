@@ -1,0 +1,17 @@
+<div class="vertical-timeline-group">
+
+  <div class="vertical-timeline-group__content">
+    <div class="vertical-timeline-group__label">{{ label }}</div>
+    <div class="vertical-timeline-group__items">
+      {% for key, item in items %}
+        <div class="vertical-timeline-item">
+          {{ item }}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+
+  <div class="vertical-timeline-group__line"></div>
+  <div class="vertical-timeline-group__marker"></div>
+</div>

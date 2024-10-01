@@ -1,0 +1,19 @@
+uuid: 404e8cfd-250d-47c8-8c1c-57e3c67c3ba4
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_timeline_item_link
+field_name: field_timeline_item_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

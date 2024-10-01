@@ -1,0 +1,19 @@
+uuid: 0e261e98-a664-4fa7-a9bd-174360af2964
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_timeline_item_label
+    - paragraphs.paragraphs_type.timeline_item
+id: paragraph.timeline_item.field_timeline_item_label
+field_name: field_timeline_item_label
+entity_type: paragraph
+bundle: timeline_item
+label: 'Timeline Label'
+description: "Used as the label on the timeline. This can be a date, a time, and ordering number, whatever you want. The actual order on the timeline is determined by the order items are in on the UI, not by this value, so these values don't need to be in order, or even need to be the same kind of data."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

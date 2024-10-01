@@ -1,0 +1,10 @@
+uuid: 67487686-4909-48f7-a1e3-61a581b0a103
+langcode: en
+status: true
+dependencies: {  }
+id: timeline_item
+label: 'Timeline Item'
+icon_uuid: null
+icon_default: null
+description: 'An item meant to be displayed in a timeline. Contains fields for a standard highlight (title, blurb, link) and a grouping text used to group items on the timeline.'
+behavior_plugins: {  }

@@ -1,0 +1,23 @@
+uuid: 32227269-172d-4cd4-b2dd-9d35499e0331
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.vertical_timeline
+    - field.field.block_content.vertical_timeline.field_timeline_items
+  module:
+    - radicati_component_timeline
+id: block_content.vertical_timeline.default
+targetEntityType: block_content
+bundle: vertical_timeline
+mode: default
+content:
+  field_timeline_items:
+    type: vertical_timeline_formatter
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

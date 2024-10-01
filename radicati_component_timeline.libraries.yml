@@ -1,0 +1,5 @@
+vertical-timeline:
+  version: 1.x
+  css:
+    theme:
+      dist/vertical-timeline.css: {}

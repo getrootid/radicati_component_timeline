@@ -1,0 +1,24 @@
+<?php
+
+//
+///**
+// * Implements hook_theme().
+// */
+function radicati_component_timeline_theme($existing, $type, $theme, $path) {
+  return [
+    'radicati_vertical_timeline' => [
+      'template' => 'radicati-vertical-timeline',
+      'variables' => [
+        'items' => [],
+      ],
+    ],
+    'radicati_vertical_timeline_group' => [
+      'template' => 'radicati-vertical-timeline-group',
+      'variables' => [
+        'label' => NULL,
+        'items' => [],
+      ],
+    ],
+  ];
+}
+
