@@ -52,13 +52,12 @@ class VerticalTimelineFormatter extends FormatterBase {
 
       $current_group['#items'][] = $view_builder->view($item, $view_mode);
 
-      if(!empty($entities[$key+1]) || $label != $entities[$key+1]->field_timeline_item_label->value) {
+      if(array_key_exists($key, $entities) && !empty($entities[$key+1]) && $label != $entities[$key+1]->field_timeline_item_label->value) {
         $elements['#items'][] = $current_group;
         $current_group = null;
       }
     }
-
-
+    
     return $elements;
   }
 }
