@@ -57,7 +57,7 @@ class VerticalTimelineFormatter extends FormatterBase {
         $current_group = null;
       }
     }
-    
+
     return $elements;
   }
 }
