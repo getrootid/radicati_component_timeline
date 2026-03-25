@@ -55,6 +55,8 @@ class VerticalTimelineFormatter extends FormatterBase {
       if(array_key_exists($key, $entities) && !empty($entities[$key+1]) && $label != $entities[$key+1]->field_timeline_item_label->value) {
         $elements['#items'][] = $current_group;
         $current_group = null;
+      } elseif($current_group != null && array_key_exists($key, $entities) && empty($entities[$key+1])) {
+        $elements['#items'][] = $current_group;
       }
     }
     
